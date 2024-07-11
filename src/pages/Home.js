@@ -8,12 +8,27 @@ function Home() {
     { index: 3, href: "experience" },
     { index: 4, href: "blog" },
   ];
+
+  const splitName = (name) => {
+    return name.split("").map((letter, index) => (
+      <span key={index} className="Letter">
+        {letter}
+      </span>
+    ));
+  };
   return (
     <div className="Home">
       <div className="Name-Section">
-        <h1 className="Name">
-          shreyash pandey
-        </h1>
+        <a href="/">
+          <h1 className="Name">
+            <div className="Word" id="first-name">
+              {splitName("anjali")}
+            </div>
+            <div className="Word" id="last-name">
+              {splitName("roy")}
+            </div>
+          </h1>
+        </a>
       </div>
       <div className="Page-Section">
         <div className="Link-Container">

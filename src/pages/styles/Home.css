@@ -1,0 +1,213 @@
+@charset "UTF-8";
+.Home {
+  background-color: #fcf7e1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Home .Name-Section {
+  height: 100%;
+  flex: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+.Home .Name-Section a {
+  color: #4b3526;
+}
+.Home .Name-Section .Name {
+  font-size: 10rem;
+  margin-right: 5rem;
+  text-transform: uppercase;
+}
+.Home .Page-Section {
+  height: 100%;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(196, 118, 16, 0.01);
+  box-shadow: -7px 0 7px -5px rgba(75, 53, 38, 0.2);
+}
+.Home .Page-Section .Link-Container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+  flex: 0.5;
+}
+.Home .Page-Section .Link-Container span {
+  font-size: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  animation: fadeRight 1s ease forwards;
+  animation-delay: calc(0.2s * var(--index));
+}
+.Home .Page-Section .Link-Container span a {
+  position: relative;
+  text-transform: capitalize;
+}
+.Home .Page-Section .Link-Container span a::after {
+  content: "  →";
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.Home .Page-Section .Link-Container span a:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+.Home .Page-Section .Link-Container span a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.5s ease;
+}
+.Home .Page-Section .Link-Container span a:hover::before {
+  width: 100%;
+}
+.Home a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1440px) {
+  .Home .Name-Section .Name {
+    font-size: 8rem;
+    margin-left: 4rem;
+  }
+  .Home .Page-Section .Link-Container span {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Home {
+    flex-direction: column;
+  }
+  .Home .Name-Section {
+    flex: 0.5;
+    animation: fadeDown 1s ease forwards;
+  }
+  .Home .Name-Section .Name {
+    font-size: 8rem;
+    margin-left: 4rem;
+  }
+  .Home .Page-Section {
+    flex: 0.5;
+    width: 100%;
+    box-shadow: 0 -7px 7px -5px rgba(75, 53, 38, 0.2);
+  }
+  .Home .Page-Section .Link-Container {
+    margin-bottom: 4rem;
+  }
+  .Home .Page-Section .Link-Container span {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 767px) {
+  .Home {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .Home .Name-Section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .Home .Name-Section .Name {
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .Home .Name-Section .Name .Word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Home .Name-Section .Name .Letter {
+    display: inline-block;
+  }
+  .Home .Page-Section {
+    width: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    background-color: none;
+  }
+  .Home .Page-Section .Link-Container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Home .Page-Section .Link-Container span {
+    font-size: 1.5rem;
+    animation: fadeLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--index));
+  }
+  .Home .Page-Section .Link-Container span a {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=Home.css.map */
