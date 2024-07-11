@@ -1,0 +1,194 @@
+@import "../../ColorScheme.scss";
+
+.Home {
+  background-color: $bgColorPrimary;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+  .Name-Section {
+    height: 100%;
+    flex: 0.5;
+    color: $nameText;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    .Name {
+      font-size: 10rem;
+      margin-right: 5rem;
+      text-transform: uppercase;
+    }
+  }
+  .Page-Section {
+    height: 100%;
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgColorSecondary;
+    box-shadow: -7px 0 7px -5px $boxShadow;
+
+    .Link-Container {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 1rem;
+      flex: 0.5;
+
+      span {
+        font-size: 3rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0;
+        animation: fadeRight 1s ease forwards;
+        animation-delay: calc(0.2s * var(--index));
+
+        a {
+          position: relative;
+          text-transform: capitalize;
+          &::after {
+            content: "  →";
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+          }
+
+          &:hover::after {
+            opacity: 1;
+            width: 100%;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background-color: $black;
+            transition: width 0.5s ease;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1440px) {
+  .Home {
+    .Name-Section {
+      .Name {
+        font-size: 8rem;
+        margin-left: 4rem;
+      }
+    }
+    .Page-Section {
+      .Link-Container {
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Home {
+    flex-direction: column;
+
+    .Name-Section {
+      flex: 0.5;
+      animation: fadeDown 1s ease forwards;
+      .Name {
+        font-size: 8rem;
+        margin-left: 4rem;
+      }
+    }
+    .Page-Section {
+      flex: 0.5;
+      width: 100%;
+      box-shadow: 0 -7px 7px -5px rgba(75, 53, 38, 0.2);
+      .Link-Container {
+        margin-bottom: 4rem;
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 300px) and (max-width: 767px) {
+  .Home {
+    flex-direction: column;
+    width: 100%;
+    .Name-Section {
+      flex: 1;
+      animation: fadeDown 1s ease forwards;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .Name {
+        font-size: 6rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    .Page-Section {
+      // flex: 1;
+      // width: 100%;
+      // box-shadow: 0 -7px 7px -5px rgba(75, 53, 38, 0.2);
+      // .Link-Container {
+      //   margin-bottom: 4rem;
+      //   span {
+      //     font-size: 2rem;
+      //   }
+      // }
+      display: none;
+    }
+  }
+}

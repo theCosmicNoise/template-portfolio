@@ -1,0 +1,30 @@
+@import "./ColorScheme.scss";
+* {
+  margin: 0;
+  padding: 0;
+  &::selection,
+  &::-moz-selection {
+    background-color: $mozSelection;
+    color: $white;
+  }
+}
+@font-face {
+  font-family: "GrandSlang-Roman";
+  src: url(./fonts/GrandSlang-Roman.otf) format("opentype"),
+    url(./fonts/GrandSlang-Roman.ttf) format("truetype"),
+    url(./fonts/GrandSlang-Roman.eot) format("embedded-opentype"),
+    url(./fonts/GrandSlang-Roman.woff) format("woff"),
+    url(./fonts/GrandSlang-Roman.woff2) format("woff2");
+}
+
+body {
+  font-family: "GrandSlang-Roman";
+  height: 100%;
+  background-color: $bgColorPrimary;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  margin: 0 auto;
+}
