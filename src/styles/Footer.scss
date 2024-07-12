@@ -1,0 +1,27 @@
+@import "../ColorScheme.scss";
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: $boxShadow;
+  width: 100%;
+  padding: 0.5rem 0;
+  .copyright-text {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $titleText;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+}

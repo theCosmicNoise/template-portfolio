@@ -1,0 +1,22 @@
+.Contact {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Contact span {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.Contact span a {
+  text-decoration: none;
+  color: #000000;
+}
+.Contact span a .icons {
+  width: 4rem;
+  height: auto;
+}/*# sourceMappingURL=Contact.css.map */

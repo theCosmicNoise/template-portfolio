@@ -1,0 +1,74 @@
+@import "../ColorScheme.scss";
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  .Logo {
+    flex: 0.1;
+    display: flex;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    .Initials {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      a {
+        color: $nameText;
+        text-decoration: none;
+      }
+    }
+    @media (max-width: 767px) {
+      font-size: 1.2rem;
+      padding-bottom: 0;
+    }
+  }
+  .Link-Section {
+    flex: 0.9;
+    display: flex;
+    width: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    .Link-Container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      span {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        a {
+          text-decoration: none;
+          color: $black;
+          padding: 0.2rem;
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          z-index: 0;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background-color: $borderPrimary;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            z-index: -1;
+          }
+
+          &:hover::before {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}

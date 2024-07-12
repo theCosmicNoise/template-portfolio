@@ -1,0 +1,23 @@
+@import "../ColorScheme.scss";
+.Contact {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  span {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: $black;
+      .icons {
+        width: 4rem;
+        height: auto;
+      }
+    }
+  }
+}

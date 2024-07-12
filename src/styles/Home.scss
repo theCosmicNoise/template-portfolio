@@ -1,4 +1,4 @@
-@import "../../ColorScheme.scss";
+@import "../ColorScheme.scss";
 
 .Home {
   background-color: $bgColorPrimary;
@@ -220,6 +220,10 @@
           a {
             text-transform: uppercase;
             font-weight: 700;
+            &::after,
+            &::before {
+              display: none;
+            }
           }
         }
       }
