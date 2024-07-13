@@ -1,0 +1,27 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: rgba(75, 53, 38, 0.2);
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+.Footer .copyright-text {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.Footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #967762;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+.Footer p span {
+  margin: 0 0.5rem;
+}/*# sourceMappingURL=Footer.css.map */

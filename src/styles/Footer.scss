@@ -8,6 +8,7 @@
   background-color: $boxShadow;
   width: 100%;
   padding: 0.5rem 0;
+  margin-top: 1rem;
   .copyright-text {
     text-transform: capitalize;
     font-size: 1.2rem;
@@ -17,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $titleText;
+    color: $mozSelection;
     letter-spacing: 2px;
     font-size: 0.8rem;
     span {

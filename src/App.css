@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*::-moz-selection {
+  background-color: #967762;
+  color: #ffffff;
+}
+*::selection, *::-moz-selection {
+  background-color: #967762;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: "GrandSlang-Roman";
+  src: url(./fonts/GrandSlang-Roman.otf) format("opentype"), url(./fonts/GrandSlang-Roman.ttf) format("truetype"), url(./fonts/GrandSlang-Roman.eot) format("embedded-opentype"), url(./fonts/GrandSlang-Roman.woff) format("woff"), url(./fonts/GrandSlang-Roman.woff2) format("woff2");
+}
+body {
+  font-family: "GrandSlang-Roman";
+  height: 100%;
+  background-color: #fcf7e1;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  margin: 0 auto;
+}/*# sourceMappingURL=App.css.map */
