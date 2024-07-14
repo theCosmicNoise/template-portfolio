@@ -4,6 +4,7 @@ import Instagram from './assets/icons/instagram.png'
 import LinkedIn from './assets/icons/linkedin.png'
 import Mail from './assets/icons/mail.png'
 import Twitter from './assets/icons/twitter.png'
+import Affogato from './assets/Affogato.jpg'
 
 export const constants = {
   links: [
@@ -48,4 +49,30 @@ export const constants = {
       href: "https://www.x.com",
     },
   ],
+  projects: [
+    {
+      title: "This is a new World",
+      link: "/",
+      imgPath: Instagram,
+      imgAlt: "Insta icon",
+    },
+    {
+      title: "This is a new Data Analytics",
+      link: "/experience",
+      imgPath: Affogato,
+      imgAlt: "Insta icon",
+    },
+    {
+      title: "Moon Landings",
+      link: "/blog",
+      imgPath: Affogato,
+      imgAlt: "Insta icon",
+    },
+    {
+      title: "My Project",
+      link: "/projects",
+      imgPath: Mail,
+      imgAlt: "Insta icon",
+    },
+  ]
 };
