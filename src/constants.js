@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
-import GitHub from './assets/icons/github.png'
-import Instagram from './assets/icons/instagram.png'
-import LinkedIn from './assets/icons/linkedin.png'
-import Mail from './assets/icons/mail.png'
-import Twitter from './assets/icons/twitter.png'
-import Affogato from './assets/Affogato.jpg'
+import GitHub from "./assets/icons/github.png";
+import Instagram from "./assets/icons/instagram.png";
+import LinkedIn from "./assets/icons/linkedin.png";
+import Mail from "./assets/icons/mail.png";
+import Twitter from "./assets/icons/twitter.png";
+import Affogato from "./assets/Affogato.jpg";
+import * as Icons from "react-icons";
+import { FaGraduationCap } from "react-icons/fa";
 
 export const constants = {
   links: [
@@ -74,5 +76,71 @@ export const constants = {
       imgPath: Mail,
       imgAlt: "Insta icon",
     },
-  ]
+  ],
+  experienceStyle: {
+    yellowGold: "#ae8303",
+    red: "#740909",
+    white: "#ffffff",
+  },
+  experience: [
+    {
+      index: 1,
+      title: "Education",
+      subTitle: "Place of Study",
+      date: "2019 - Present",
+      description: "This is a paragraph",
+      icon: <FaGraduationCap />,
+      evidence: [
+        {
+          buttonText: "View Source Code",
+          link: "/",
+        },
+        {
+          buttonText: "Visit Website",
+          link: "/about",
+        }
+      ],
+    },
+    {
+      index: 2,
+      title: "Work",
+      subTitle: "Place of Study",
+      date: "2019 - Present",
+      description: "This is a paragraph",
+      icon: <FaGraduationCap />,
+      evidence: [
+        {
+          buttonText: "View Source Code",
+          link: "/",
+        },
+      ],
+    },
+    {
+      index: 3,
+      title: "Education",
+      subTitle: "Place of Study",
+      date: "2019 - Present",
+      description: "This is a paragraph",
+      icon: <FaGraduationCap />,
+      evidence: [],
+    },
+    {
+      index: 4,
+      title: "Education",
+      subTitle: "Place of Study",
+      date: "2019 - Present",
+      description: "This is a paragraph",
+      icon: <FaGraduationCap />,
+      evidence: [
+        {
+          buttonText: "View Source Code for this",
+          link: "/",
+        },
+        {
+          buttonText: "Visit Website",
+          link: "/about",
+        },
+      ],
+    },
+  ],
 };

@@ -1,0 +1,41 @@
+@import '../ColorScheme.scss';
+.Blog {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98%;
+    height: 100%;
+    flex-direction: column;
+    .Page-Title {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      h1 {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 2rem 3rem 0 0;
+        font-size: 4rem;
+        color: $titleText;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    .Blog {
+      .Page-Title {
+        h1 {
+          margin: 2rem 3rem 0 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .Blog {
+      .Page-Title {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }

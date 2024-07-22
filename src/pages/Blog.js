@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import "../styles/Blog.scss";
 
 function Blog() {
   return (
-    <div>Blog</div>
-  )
+    <div className="Blog">
+      <div className="Page-Title">
+        <h1>
+          <i>Bl</i>og
+        </h1>
+      </div>
+    </div>
+  );
 }
 
-export default Blog
+export default Blog;

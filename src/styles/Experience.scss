@@ -1,4 +1,4 @@
-@import '../ColorScheme.scss';
+@import "../ColorScheme.scss";
 .Experience {
   display: flex;
   justify-content: flex-start;
@@ -20,12 +20,60 @@
       color: $titleText;
     }
   }
+  .Experience-Container {
+    width: 90%;
+    letter-spacing: 2px;
+    h4,
+    p,
+    .link-container {
+      margin: 1rem 0 0;
+    }
+    .link-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+      button {
+        width: max-content;
+        height: 4vh;
+        font-size: 1.1rem;
+        // border: 2px solid $red;
+        box-shadow: -3px 3px 7px $borderPrimary;
+        border: none;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 0 0.5rem;
+        a {
+          text-decoration: none;
+          color: $titleText;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .Experience {
+    .Experience-Container {
+      .link-container {
+        button {
+          height: 6vh;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
   .Experience {
     .Page-Title {
       h1 {
         margin: 2rem 3rem 0 0;
+      }
+    }
+    .Experience-Container {
+      .link-container {
+        justify-content: flex-start;
       }
     }
   }
@@ -35,7 +83,21 @@
     .Page-Title {
       h1 {
         font-size: 3rem;
-        margin: 1rem 0 0 0;
+        margin: 1rem 1rem 0 0;
+      }
+    }
+    .Experience-Container {
+      width: 100%;
+      .link-container {
+        justify-content: flex-start;
+        overflow: hidden;
+        button {
+          width: max-content;
+          height: 3vh;
+          font-size: 0.9rem;
+          font-weight: 500;
+          padding: 0 0.1rem;
+        }
       }
     }
   }
