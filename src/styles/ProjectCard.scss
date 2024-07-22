@@ -32,6 +32,12 @@
     }
   }
 }
+@media (min-width: 1366px) {
+  .Card {
+    padding: 2rem 3rem;
+  }
+}
+
 @media (max-width: 767px) {
   .Card {
     a {
