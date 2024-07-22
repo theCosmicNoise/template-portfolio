@@ -1,0 +1,67 @@
+.Projects {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98%;
+  height: 100%;
+  flex-direction: column;
+}
+.Projects .Page-Title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+.Projects .Page-Title h1 {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 2rem 3rem 0 0;
+  font-size: 4rem;
+  color: #ae8303;
+}
+.Projects .Project-Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  scroll-behavior: smooth;
+  height: 66vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.Projects .Project-Container ::-webkit-scrollbar {
+  display: none;
+}
+.Projects .None-Available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: inherit;
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .Projects .Page-Title h1 {
+    margin: 2rem 3rem 0 0;
+  }
+  .Projects .Project-Container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    height: 100vh;
+  }
+}
+@media (max-width: 767px) {
+  .Projects .Page-Title h1 {
+    font-size: 3rem;
+    margin: 1rem 1rem 0 0;
+  }
+  .Projects .Project-Container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    height: 100vh;
+  }
+}/*# sourceMappingURL=Projects.css.map */
