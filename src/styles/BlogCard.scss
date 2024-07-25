@@ -6,7 +6,7 @@
   box-shadow: -5px 5px 7px $boxShadow;
   background-color: $postBgColor;
   padding: 1.5rem;
-  height: 50vh;
+  height: 55vh;
   width: 20vw;
   border-radius: 5px;
   a {
@@ -35,7 +35,7 @@
     .Blog-Excerpt {
       flex: 0.6;
       text-align: justify;
-      overflow-y: scroll;
+      scrollbar-width: none;
     }
     .Blog-Metadata {
       flex: 0.2;
