@@ -3,28 +3,26 @@ import "../styles/BlogPost.scss";
 import { useParams } from "react-router-dom";
 import { client } from "../utils/fetchClient";
 import PageNotFound from "./PageNotFound";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import richTextOptions from "../utils/richTextOptions";
 
-function BlogPost() {
-  const [blogPost, setBlogPost] = useState(null);
+function ProjectPost() {
+  const [projectPost, setProjectPost] = useState(null);
   const [error, setError] = useState(false);
 
   const { slug } = useParams();
 
   useEffect(() => {
-    const fetchBlogPost = async () => {
+    const fetchProjectPost = async () => {
       try {
         const entries = await client.getEntries({
           content_type: "post",
           "fields.slug": slug,
         });
         const filteredEntries = entries.items.filter(
-          (post) => !post.fields.isProject
+          (post) => post.fields.isProject
         );
 
         if (filteredEntries.length > 0) {
-          setBlogPost(filteredEntries[0]);
+          setProjectPost(filteredEntries[0]);
         } else {
           setError(true);
         }
@@ -33,25 +31,20 @@ function BlogPost() {
       }
     };
 
-    fetchBlogPost();
+    fetchProjectPost();
   }, [slug]);
 
   if (error) {
     return <PageNotFound />;
   }
 
-  const categories = blogPost?.fields.category
-    ? blogPost.fields.category.map((cat) => cat.fields.categoryName)
+  const categories = projectPost?.fields.category
+    ? projectPost.fields.category.map((cat) => cat.fields.categoryName)
     : [];
-
-  const content = blogPost?.fields.content;
-
+  console.log(projectPost);
   return (
     <div className="Blog-Post">
-      <h1 className="title">{blogPost?.fields.title}</h1>
-      <p className="date">
-        - {new Date(blogPost?.sys.updatedAt).toLocaleDateString()}
-      </p>
+      <h1 className="title">{projectPost?.fields.title}</h1>
       <div className="categories">
         {categories.map((category, index) => (
           <h3 key={index} className="category">
@@ -61,14 +54,22 @@ function BlogPost() {
       </div>
       <img
         className="cover-image"
-        src={blogPost?.fields.coverImage.fields.file.url}
-        alt={blogPost?.fields.coverImage.fields.file.title}
+        src={projectPost?.fields.coverImage.fields.file.url}
+        alt={projectPost?.fields.coverImage.fields.file.title}
       />
-      <div className="main-post">
-        {content ? documentToReactComponents(content, richTextOptions) : <p>Loading...</p>}
+      <div className="project-link">
+        {projectPost?.fields.projectLink && (
+          <a
+            href={projectPost?.fields.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Project Link↗
+          </a>
+        )}
       </div>
     </div>
   );
 }
 
-export default BlogPost;
+export default ProjectPost;

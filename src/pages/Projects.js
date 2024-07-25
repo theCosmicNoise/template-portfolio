@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Projects.scss";
 import ProjectCard from "../components/ProjectCard";
-import { constants } from "../constants";
+import { client } from "../utils/fetchClient";
 
 function Projects() {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const getAllEntries = async () => {
+      try {
+        const entries = await client.getEntries({
+          content_type: "post",
+          order: "-sys.updatedAt",
+        });
+        setProjects(entries.items);
+        console.log(entries.items);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    getAllEntries();
+  }, []);
+  const filteredProjects = projects.filter((post) => post.fields.isProject);
+
   return (
     <div className="Projects">
       <div className="Page-Title">
@@ -11,14 +29,15 @@ function Projects() {
           <i>Pro</i>jects
         </h1>
       </div>
-      {constants.projects.length > 0 ? (
+      {filteredProjects.length > 0 ? (
         <div className="Project-Container">
-          {constants.projects.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard
-              title={project.title}
-              link={project.link}
-              imgPath={project.imgPath}
-              imgAlt={project.imgAlt}
+              key={project.sys.id}
+              title={project.fields.title}
+              link={`projects/${project.fields.slug}`}
+              imgPath={project.fields.coverImage.fields.file.url}
+              imgAlt={project.fields.coverImage.fields.file.title}
             />
           ))}
         </div>

@@ -3,16 +3,16 @@
   a {
     text-decoration: none;
     color: $nameText;
+    max-width: 400px;
+    max-height: 400px;
     .Project-Image {
-      max-width: 360px;
-      max-height: 360px;
       display: flex;
       justify-content: center;
       align-items: center;
       img {
         object-fit: cover;
-        max-width: 360px;
-        max-height: 360px;
+        height: 360px;
+        width: 360px;
       }
     }
     .Project-Title {
@@ -44,13 +44,18 @@
 @media (max-width: 767px) {
   .Card {
     a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 300px;
+      max-height: 300px;
       .Project-Image {
-        max-width: 90%;
-        max-height: 90%;
         img {
           object-fit: cover;
-          width: 90%;
-          height: 90%;
+          height: 250px;
+        width: 250px;
         }
       }
       .Project-Title {

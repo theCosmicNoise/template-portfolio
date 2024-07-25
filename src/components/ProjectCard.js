@@ -17,14 +17,14 @@ function ProjectCard({ title, link, imgPath, imgAlt }) {
   );
 }
 ProjectCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    imgPath: PropTypes.string.isRequired,
-    imgAlt: PropTypes.string.isRequired,
-  };
-  
-  ProjectCard.defaultProps = {
-    imgAlt: "Project Image",
-  };
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  imgPath: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired,
+};
+
+ProjectCard.defaultProps = {
+  imgAlt: "Project Image",
+};
 
 export default ProjectCard;

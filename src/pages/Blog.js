@@ -21,6 +21,7 @@ function Blog() {
     };
     getAllEntries();
   }, []);
+  const filteredBlogPosts = blogPosts.filter((post) => !post.fields.isProject);
 
   return (
     <div className="Blog">
@@ -30,7 +31,7 @@ function Blog() {
         </h1>
       </div>
       <div className="Blog-Container">
-        {blogPosts.map((post) => {
+        {filteredBlogPosts.map((post) => {
           const categories = post.fields.category
             ? post.fields.category.map((cat) => cat.fields.categoryName)
             : [];

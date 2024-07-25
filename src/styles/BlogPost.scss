@@ -10,8 +10,9 @@
   text-align: justify;
   font-family: "Montserrat";
   img {
-    width: 80%;
+    width: 90%;
     max-width: 100%;
+    height: auto;
   }
   .title {
     font-family: "GrandSlang-Roman";
@@ -48,6 +49,25 @@
       rotate: -5deg;
     }
   }
+  .project-link {
+    a {
+      color: $red;
+      font-weight: 500;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+  }
+  .main-post {
+    text-align: justify;
+    flex-direction: column;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    img {
+      width: 50%;
+      max-width: 100%;
+    }
+    
+  }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
   .Blog-Post {
@@ -60,6 +80,14 @@
     img {
       width: 90%;
       max-width: 100%;
+    }
+    .project-link {
+      a {
+        color: $red;
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -86,6 +114,14 @@
       }
       .category {
         font-size: 1rem;
+      }
+    }
+    .project-link {
+      a {
+        color: $red;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
       }
     }
   }

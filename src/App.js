@@ -1,5 +1,10 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
@@ -9,6 +14,7 @@ import Experience from "./pages/Experience";
 import Blog from "./pages/Blog";
 import { AnimatePresence } from "framer-motion";
 import BlogPost from "./pages/BlogPost";
+import ProjectPost from "./pages/ProjectPost";
 
 function App() {
   return (
@@ -63,6 +69,14 @@ function AppContent() {
           element={
             <Layout>
               <BlogPost />
+            </Layout>
+          }
+        />
+        <Route
+          path="projects/:slug"
+          element={
+            <Layout>
+              <ProjectPost />
             </Layout>
           }
         />

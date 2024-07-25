@@ -1,8 +1,13 @@
 import React from "react";
 import "../styles/BlogCard.scss";
 import PropTypes from "prop-types";
+import { marked } from "marked";
 
 function BlogCard({ title, link, excerpt, date, categories }) {
+  const getExcerptHtml = (markdownText) => {
+    return { __html: marked(markdownText) };
+  };
+
   return (
     <div className="Blog-Card">
       <a href={link} rel="noopener noreferrer">
@@ -10,7 +15,7 @@ function BlogCard({ title, link, excerpt, date, categories }) {
           <h3>{title}</h3>
         </div>
         <div className="Blog-Excerpt">
-          {excerpt}
+          <div dangerouslySetInnerHTML={getExcerptHtml(excerpt)} />
         </div>
         <div className="Blog-Metadata">
           <div className="Blog-Categories">
