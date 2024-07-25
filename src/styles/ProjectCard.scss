@@ -6,15 +6,18 @@
     .Project-Image {
       max-width: 360px;
       max-height: 360px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         object-fit: cover;
-        width: 360px;
-        height: 360px;
+        max-width: 360px;
+        max-height: 360px;
       }
     }
     .Project-Title {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       h3 {
         font-style: italic;
@@ -27,8 +30,8 @@
   }
   &:hover {
     a {
-        text-decoration: underline 0.1rem;
-        text-underline-offset: 0.2rem;
+      text-decoration: underline 0.1rem;
+      text-underline-offset: 0.2rem;
     }
   }
 }
@@ -63,6 +66,5 @@
         }
       }
     }
-    
   }
 }

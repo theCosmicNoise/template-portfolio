@@ -16,8 +16,8 @@ function Navbar() {
       <div className="Link-Section">
         <div className="Link-Container">
           {constants.links.map((link) => (
-            <span key={link.href}>
-              <a href={link.href}>{link.href}</a>
+            <span key={link.index}>
+              <a href={`/${link.href}`}>{link.href}</a>
             </span>
           ))}
         </div>

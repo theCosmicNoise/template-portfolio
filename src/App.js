@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Blog from "./pages/Blog";
 import { AnimatePresence } from "framer-motion";
+import BlogPost from "./pages/BlogPost";
 
 function App() {
   return (
@@ -54,6 +55,14 @@ function AppContent() {
           element={
             <Layout>
               <Blog />
+            </Layout>
+          }
+        />
+        <Route
+          path="blog/:slug"
+          element={
+            <Layout>
+              <BlogPost />
             </Layout>
           }
         />

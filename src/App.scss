@@ -17,6 +17,11 @@
     url(./fonts/GrandSlang-Roman.woff2) format("woff2");
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf) format(truetype);
+}
+
 body {
   font-family: "GrandSlang-Roman";
   height: 100%;

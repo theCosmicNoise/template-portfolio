@@ -59,6 +59,18 @@ export const constants = {
       imgAlt: "Insta icon",
     },
     {
+      title: "This is a new World",
+      link: "/",
+      imgPath: Instagram,
+      imgAlt: "Insta icon",
+    },
+    {
+      title: "This is a new World",
+      link: "/",
+      imgPath: Instagram,
+      imgAlt: "Insta icon",
+    },
+    {
       title: "This is a new Data Analytics",
       link: "/experience",
       imgPath: Affogato,

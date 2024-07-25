@@ -1,0 +1,92 @@
+@import "../ColorScheme.scss";
+.Blog-Post {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 5rem 0 2rem;
+  text-align: justify;
+  font-family: "Montserrat";
+  img {
+    width: 80%;
+    max-width: 100%;
+  }
+  .title {
+    font-family: "GrandSlang-Roman";
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    color: $titleText;
+    font-size: 3rem;
+  }
+  * {
+    margin: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .date {
+    justify-content: flex-end;
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  .categories {
+    gap: 2rem;
+    flex-wrap: wrap;
+    .category {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.3rem;
+      background-color: $red;
+      box-shadow: -4px 4px 9px $boxShadow;
+      width: max-content;
+      padding: 0.5rem;
+      rotate: -5deg;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .Blog-Post {
+    .title {
+      font-size: 2rem;
+    }
+    .date {
+      width: 100%;
+    }
+    img {
+      width: 90%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Blog-Post {
+    margin: 3rem 0 2rem;
+    .title {
+      font-size: 2rem;
+      text-align: right;
+    }
+    .date {
+      width: 100%;
+    }
+    img {
+      width: 90%;
+      max-width: 100%;
+    }
+    .categories {
+      gap: 1rem;
+      flex-wrap: wrap;
+      * {
+        margin: 0;
+      }
+      .category {
+        font-size: 1rem;
+      }
+    }
+  }
+}
