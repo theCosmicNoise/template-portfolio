@@ -6,9 +6,10 @@ import Mail from "./assets/icons/mail.png";
 import Twitter from "./assets/icons/twitter.png";
 import Affogato from "./assets/Affogato.jpg";
 import * as Icons from "react-icons";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 export const constants = {
+  my_link: "https://anjaliroy.vercel.app",
   links: [
     { index: 1, href: "about" },
     { index: 2, href: "projects" },
@@ -51,44 +52,7 @@ export const constants = {
       href: "https://www.x.com",
     },
   ],
-  projects: [
-    {
-      title: "This is a new World",
-      link: "/",
-      imgPath: Instagram,
-      imgAlt: "Insta icon",
-    },
-    {
-      title: "This is a new World",
-      link: "/",
-      imgPath: Instagram,
-      imgAlt: "Insta icon",
-    },
-    {
-      title: "This is a new World",
-      link: "/",
-      imgPath: Instagram,
-      imgAlt: "Insta icon",
-    },
-    {
-      title: "This is a new Data Analytics",
-      link: "/experience",
-      imgPath: Affogato,
-      imgAlt: "Insta icon",
-    },
-    {
-      title: "Moon Landings",
-      link: "/blog",
-      imgPath: Affogato,
-      imgAlt: "Insta icon",
-    },
-    {
-      title: "My Project",
-      link: "/projects",
-      imgPath: Mail,
-      imgAlt: "Insta icon",
-    },
-  ],
+
   experienceStyle: {
     yellowGold: "#ae8303",
     red: "#740909",
@@ -97,62 +61,43 @@ export const constants = {
   experience: [
     {
       index: 1,
-      title: "Education",
-      subTitle: "Place of Study",
-      date: "2019 - Present",
+      title: "CURRENT",
+      subTitle: "Zapcom Group Inc.",
+      date: "July 2023 - Present",
       description: "This is a paragraph",
-      icon: <FaGraduationCap />,
-      evidence: [
-        {
-          buttonText: "View Source Code",
-          link: "/",
-        },
-        {
-          buttonText: "Visit Website",
-          link: "/about",
-        }
-      ],
+      icon: <FaBriefcase />,
+      evidence: [],
+      location: "Bengaluru, India",
     },
     {
       index: 2,
-      title: "Work",
-      subTitle: "Place of Study",
-      date: "2019 - Present",
+      title: "INTERNSHIP",
+      subTitle: "Samsung Semiconductor Research India",
+      date: "July - December, 2022",
       description: "This is a paragraph",
-      icon: <FaGraduationCap />,
-      evidence: [
-        {
-          buttonText: "View Source Code",
-          link: "/",
-        },
-      ],
+      icon: <FaBriefcase />,
+      evidence: [],
+      location: "Bengaluru, India",
     },
     {
       index: 3,
-      title: "Education",
-      subTitle: "Place of Study",
-      date: "2019 - Present",
+      title: "INTERNSHIP",
+      subTitle: "Power Grid Corporation of India, Ltd.",
+      date: "May - July, 2021",
       description: "This is a paragraph",
-      icon: <FaGraduationCap />,
+      icon: <FaBriefcase />,
       evidence: [],
+      location: "Bengaluru, India",
     },
     {
       index: 4,
-      title: "Education",
-      subTitle: "Place of Study",
-      date: "2019 - Present",
+      title: "EDUCATION",
+      subTitle: "Birla Institute of Technology and Science, Pilani",
+      date: "August 2019 - March 2023",
       description: "This is a paragraph",
       icon: <FaGraduationCap />,
-      evidence: [
-        {
-          buttonText: "View Source Code for this",
-          link: "/",
-        },
-        {
-          buttonText: "Visit Website",
-          link: "/about",
-        },
-      ],
+      evidence: [],
+      location: "Bengaluru, India",
     },
   ],
 };

@@ -10,7 +10,7 @@
   text-align: justify;
   font-family: "Montserrat";
   img {
-    width: 90%;
+    width: 80%;
     max-width: 100%;
     height: auto;
   }
@@ -21,22 +21,27 @@
     text-align: center;
     color: $titleText;
     font-size: 3rem;
-  }
-  * {
-    margin: 0.5rem 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  * {
+    margin: 0.5rem 0;
   }
   .date {
     justify-content: flex-end;
     width: 50%;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
   }
   .categories {
     gap: 2rem;
     flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .category {
       color: $white;
       text-transform: uppercase;
@@ -58,53 +63,82 @@
     }
   }
   .main-post {
-    text-align: justify;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    * {
-      flex-direction: column;
-      margin: 0.25rem 0;
-      align-items: flex-start;
+    text-align: justify;
+    a {
+      color: $red;
+      text-decoration: none;
+      font-weight: 600;
     }
-    h1, h2, h3, h4, h5, h6 {
-      align-items: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       text-align: center;
     }
-    a {
-      text-decoration: none;
-      color: $red;
-      font-weight: 600;
-      font-size: 1.3rem;
-      border: 2px solid $titleText;
-      border-radius: 5px;
-      width: max-content;
-      padding: 0.2rem;
-      align-self: flex-start;
+    * {
+      width: 100%;
+    }
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
     }
     img {
-      width: 50%;
-      max-width: 100%;
-      align-items: center;
+      width: 75%;
     }
     blockquote {
       background-color: $boxShadow;
+      border-left: 5px solid $mozSelection;
       border-radius: 5px;
-      border-left: 5px solid $red;
+      padding: 1rem;
+      font-style: italic;
+    }
+    pre {
+      background: $black;
+      color: $white;
+      padding: 1rem;
+      border-radius: 5px;
+      border-top: 5px solid $lightBlueColor;
+      border-left: 5px solid $lightBlueColor;
+      font-size: 1rem;
+    }
+    table {
+      border-collapse: collapse;
+      text-align: center;
       width: max-content;
-      padding: 0.5rem;
-      align-self: flex-start;
-      * {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: max-content;
-        gap: 0.2rem;
+      thead,
+      tbody {
+        margin: 0;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: $red;
+        color: $white;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: $borderPrimary;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: $bgColorPrimary;
       }
     }
   }
 }
+
 @media (min-width: 768px) and (max-width: 1025px) {
   .Blog-Post {
     .title {
@@ -163,8 +197,15 @@
     .main-post {
       text-align: left;
       img {
-        width: 100%;
+        width: 80%;
         align-items: center;
+      }
+      pre {
+        overflow: scroll;
+        width: 90%;
+      }
+      table {
+        font-size: 0.8rem;
       }
     }
   }

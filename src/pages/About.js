@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/About.scss";
-import Affogato from "../assets/Affogato.jpg";
+import me from "../assets/me.png";
 
 function About() {
   return (
@@ -12,31 +12,42 @@ function About() {
       </div>
       <div className="Content-Info">
         <div className="profile-pic">
-          <img src={Affogato} alt="Profile Pic" />
+          <img src={me} alt="Profile Pic" />
         </div>
         <div className="profile-content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit
-            amet mauris et turpis efficitur rhoncus. Donec eget dui mauris.
-            Aenean nec dui commodo, finibus lorem vitae, commodo est. Sed et
-            vehicula ex, in feugiat enim. Fusce interdum justo lorem. Phasellus
-            id pharetra elit. Morbi ut vulputate nunc. Nulla in nisl ligula. Sed
-            bibendum tincidunt dolor, nec vulputate mi dictum at. Proin luctus
-            varius interdum. Sed eget enim sit amet dolor volutpat condimentum.
-            Phasellus eget nisl arcu. Morbi et tempus tellus, sit amet luctus
-            ex. Cras ipsum massa, commodo vitae dui vitae, interdum egestas
-            dolor. Curabitur vitae neque ac libero ultricies sollicitudin.
-            Suspendisse quis massa gravida, convallis mauris eu, sagittis metus.
-            Fusce sed quam sit amet nulla dictum ullamcorper ut ut neque.
+            I am a software engineer specializing in{" "}
+            <b>full stack web development</b> and <b>data analytics</b>. I
+            studied Electrical and Electronics at BITS Pilani, India which paved
+            the way for me to intern at Samsung Semiconductor India where I
+            built real-time monitoring dashboards for the cross-functional Wi-Fi
+            team to improve their connectivity performance. Currently I work at
+            a B2B SaaS organization called Zapcom Group Inc. where I have
+            developed softwares for clients in the travel & hospitality sector
+            and loyalty program management systems.
           </p>
           <p>
-            {" "}
-            Curabitur tempor commodo eros, at commodo quam rhoncus et. Quisque
-            fringilla nulla nec felis consectetur, quis finibus erat rhoncus.
-            Aliquam erat volutpat. Sed vehicula metus sed arcu malesuada
-            pretium. Aliquam rhoncus purus id gravida molestie. Nam nisl erat,
-            bibendum gravida nulla malesuada, pellentesque tincidunt massa. Duis
-            elementum turpis sem, at posuere lectus efficitur quis.{" "}
+            At this juncture of my career, I am actively working with data
+            analytics to craft compelling narratives and solve real world
+            problems, hardest of all being Education and Environment. I want to
+            fulfill my role in{" "}
+            <span className="background">
+              creating a sustainable world -<i>one tech at a time</i>
+            </span>
+            .
+          </p>
+          <p>
+            Outside work, I am deeply interested in policy making and
+            international relations. Apart from that, I am an amateur historian
+            on the lookout for opportunities to hone my knowledge. My favorite
+            era of exploration is Ancient India (specifically the IVC, Mauryan
+            and Gupta ages) and if you have any conspiracy theories, feel free
+            to hit me up!
+          </p>
+          <p>
+            By the way, I have a lot of interests which help me get confused on
+            which one to pick for the day. Usually I watch movies and
+            documentaries, look at the sky, play harmonica and cook good food.
           </p>
         </div>
       </div>

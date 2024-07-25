@@ -23,6 +23,16 @@
   .Experience-Container {
     width: 90%;
     letter-spacing: 2px;
+    h4 {
+      color: $experienceColor;
+    }
+    h5 {
+      font-weight: 400;
+    }
+    p {
+      font-family: "Montserrat";
+      letter-spacing: 0.5px;
+    }
     h4,
     p,
     .link-container {

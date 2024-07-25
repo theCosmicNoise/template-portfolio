@@ -3,8 +3,7 @@ import "../styles/BlogPost.scss";
 import { useParams } from "react-router-dom";
 import { client } from "../utils/fetchClient";
 import PageNotFound from "./PageNotFound";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import richTextOptions from "../utils/richTextOptions";
+import { marked } from "marked";
 
 function BlogPost() {
   const [blogPost, setBlogPost] = useState(null);
@@ -44,7 +43,11 @@ function BlogPost() {
     ? blogPost.fields.category.map((cat) => cat.fields.categoryName)
     : [];
 
-  const content = blogPost?.fields.content;
+  const content = blogPost?.fields.contentMain;
+
+  const getExcerptHtml = (markdownText) => {
+    return { __html: marked(markdownText) };
+  };
 
   return (
     <div className="Blog-Post">
@@ -64,9 +67,15 @@ function BlogPost() {
         src={blogPost?.fields.coverImage.fields.file.url}
         alt={blogPost?.fields.coverImage.fields.file.title}
       />
-      <div className="main-post">
-        {content ? documentToReactComponents(content, richTextOptions) : <p>Loading...</p>}
-      </div>
+
+      {content ? (
+        <div
+          className="main-post"
+          dangerouslySetInnerHTML={getExcerptHtml(content)}
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }

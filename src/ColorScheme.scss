@@ -9,3 +9,11 @@ $titleText: #ae8303;
 $borderPrimary: #bbab8c;
 $boxShadow: rgba(75, 53, 38, 0.2);
 $postBgColor: #e4d7cc70;
+$experienceColor: #01204E;
+$lightBlueColor: #add8e6;
+
+.background {
+  background-color: $borderPrimary;
+  color: $white;
+  padding: 0 0.2rem;
+}

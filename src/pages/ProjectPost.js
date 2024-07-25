@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../styles/BlogPost.scss";
 import { useParams } from "react-router-dom";
 import { client } from "../utils/fetchClient";
-import richTextOptions from "../utils/richTextOptions";
 import PageNotFound from "./PageNotFound";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { marked } from "marked";
 
 function ProjectPost() {
   const [projectPost, setProjectPost] = useState(null);
@@ -44,8 +43,11 @@ function ProjectPost() {
     ? projectPost.fields.category.map((cat) => cat.fields.categoryName)
     : [];
 
-  console.log(projectPost);
-  const content = projectPost?.fields.content;
+  const content = projectPost?.fields.contentMain;
+
+  const getExcerptHtml = (markdownText) => {
+    return { __html: marked(markdownText) };
+  };
 
   return (
     <div className="Blog-Post">
@@ -75,7 +77,10 @@ function ProjectPost() {
       </div>
       <div className="main-post">
         {content ? (
-          documentToReactComponents(content, richTextOptions)
+          <div
+            className="main-post"
+            dangerouslySetInnerHTML={getExcerptHtml(content)}
+          />
         ) : (
           <p>Loading...</p>
         )}

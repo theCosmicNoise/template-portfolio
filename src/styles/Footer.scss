@@ -14,13 +14,14 @@
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
-  p {
+  p, a {
     display: flex;
     justify-content: center;
     align-items: center;
     color: $mozSelection;
     letter-spacing: 2px;
     font-size: 0.8rem;
+    text-decoration: none;
     span {
       margin: 0 0.5rem;
     }

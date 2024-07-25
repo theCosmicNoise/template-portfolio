@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .motion-wrapper {
     .content-container {
       .content-layout {
@@ -63,6 +63,9 @@
             width: 100%;
             justify-content: space-around;
             flex: 0.9;
+            main {
+              width: 50%;
+            }
           }
           .contact-content {
             width: 100%;

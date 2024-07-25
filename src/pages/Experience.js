@@ -34,6 +34,7 @@ function Experience() {
               >
                 <h3>{arr.title}</h3>
                 <h4>{arr.subTitle}</h4>
+                <h5>{arr.location}</h5>
                 <p>{arr.description}</p>
                 <div className="link-container">
                   {arr.evidence.length > 0 &&

@@ -25,6 +25,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0.5rem 0;
     }
     .Blog-Title {
       flex: 0.2;
@@ -36,6 +37,7 @@
       flex: 0.6;
       text-align: justify;
       scrollbar-width: none;
+      align-items: flex-start;
     }
     .Blog-Metadata {
       flex: 0.2;
@@ -62,8 +64,8 @@
 }
 @media (min-width: 768px) and (max-width: 1025px) {
   .Blog-Card {
-    height: 30vh;
-    width: 27vw;
+    height: max-content;
+    width: auto;
   }
 }
 
@@ -71,6 +73,6 @@
   .Blog-Card {
     width: 80%;
     gap: 2rem;
-    height: 30vh;
+    height: max-content;
   }
 }

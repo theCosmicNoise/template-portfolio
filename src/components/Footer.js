@@ -11,13 +11,13 @@ function Footer() {
       <code className="copyright-text">
         © {constants.name.firstName} {constants.name.lastName}, {currentYear}
       </code>
-      <p>
+      <p><a href={constants.my_link}>
         Made with{" "}
         <span>
           <Heart alt="Heart Icon" />
         </span>{" "}
         by Anjali Roy
-      </p>
+      </a></p>
     </div>
   );
 }
