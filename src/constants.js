@@ -25,19 +25,13 @@ export const constants = {
       key: "Email",
       imgPath: Mail,
       imgAlt: "email-icon",
-      href: "mailto:abc@mail.com",
-    },
-    {
-      key: "Instagram",
-      imgPath: Instagram,
-      imgAlt: "instagram-icon",
-      href: "https://www.instagram.com",
+      href: "mailto:anjaliroy3101@gmail.com",
     },
     {
       key: "GitHub",
       imgPath: GitHub,
       imgAlt: "github-icon",
-      href: "https://www.github.com",
+      href: "https://github.com/theCosmicNoise",
     },
     {
       key: "LinkedIn",
