@@ -30,7 +30,7 @@
     }
     .link-container {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       width: 100%;
       flex-wrap: wrap;
@@ -39,7 +39,6 @@
         width: max-content;
         height: 4vh;
         font-size: 1.1rem;
-        // border: 2px solid $red;
         box-shadow: -3px 3px 7px $borderPrimary;
         border: none;
         background-color: $white;
@@ -89,14 +88,15 @@
     .Experience-Container {
       width: 100%;
       .link-container {
-        justify-content: flex-start;
         overflow: hidden;
+        padding: 0.25rem;
         button {
           width: max-content;
           height: 3vh;
           font-size: 0.9rem;
-          font-weight: 500;
+          font-weight: 600;
           padding: 0 0.1rem;
+          box-shadow: -2px 2px 2px $boxShadow;
         }
       }
     }

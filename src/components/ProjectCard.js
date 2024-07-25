@@ -5,7 +5,7 @@ import "../styles/ProjectCard.scss";
 function ProjectCard({ title, link, imgPath, imgAlt }) {
   return (
     <div className="Card">
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a href={link} rel="noopener noreferrer">
         <div className="Project-Image">
           <img src={imgPath} alt={imgAlt} />
         </div>

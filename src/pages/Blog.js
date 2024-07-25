@@ -30,23 +30,27 @@ function Blog() {
           <i>Bl</i>og
         </h1>
       </div>
-      <div className="Blog-Container">
-        {filteredBlogPosts.map((post) => {
-          const categories = post.fields.category
-            ? post.fields.category.map((cat) => cat.fields.categoryName)
-            : [];
-          return (
-            <BlogCard
-              key={post.sys.id}
-              title={post.fields.title}
-              link={`blog/${post.fields.slug}`}
-              excerpt={post.fields.excerpt}
-              categories={categories}
-              date={new Date(post.sys.updatedAt).toLocaleDateString()}
-            />
-          );
-        })}
-      </div>
+      {filteredBlogPosts.length > 0 ? (
+        <div className="Blog-Container">
+          {filteredBlogPosts.map((post) => {
+            const categories = post.fields.category
+              ? post.fields.category.map((cat) => cat.fields.categoryName)
+              : [];
+            return (
+              <BlogCard
+                key={post.sys.id}
+                title={post.fields.title}
+                link={`blog/${post.fields.slug}`}
+                excerpt={post.fields.excerpt}
+                categories={categories}
+                date={new Date(post.sys.updatedAt).toLocaleDateString()}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <p className="None-Available">No blogs available</p>
+      )}
     </div>
   );
 }
