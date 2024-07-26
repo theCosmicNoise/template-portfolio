@@ -1,11 +1,8 @@
 /* eslint-disable no-unused-vars */
 import GitHub from "./assets/icons/github.png";
-import Instagram from "./assets/icons/instagram.png";
 import LinkedIn from "./assets/icons/linkedin.png";
 import Mail from "./assets/icons/mail.png";
-import Twitter from "./assets/icons/twitter.png";
-import Affogato from "./assets/Affogato.jpg";
-import * as Icons from "react-icons";
+import Resume from "./assets/icons/resume.png";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 export const constants = {
@@ -37,13 +34,13 @@ export const constants = {
       key: "LinkedIn",
       imgPath: LinkedIn,
       imgAlt: "linkedin-icon",
-      href: "https://www.linkedin.com",
+      href: "https://www.linkedin.com/in/royanjali-bpgc",
     },
     {
-      key: "X",
-      imgPath: Twitter,
-      imgAlt: "x-icon",
-      href: "https://www.x.com",
+      key: "Resume",
+      imgPath: Resume,
+      imgAlt: "resume-icon",
+      href: "",
     },
   ],
 

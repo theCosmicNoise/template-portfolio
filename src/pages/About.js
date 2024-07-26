@@ -22,7 +22,7 @@ function About() {
             the way for me to intern at Samsung Semiconductor India where I
             built real-time monitoring dashboards for the cross-functional Wi-Fi
             team to improve their connectivity performance. Currently I work at
-            a B2B SaaS organization called Zapcom Group Inc. where I have
+            Zapcom Group Inc which is a B2B SaaS organization. Here I have
             developed softwares for clients in the travel & hospitality sector
             and loyalty program management systems.
           </p>
