@@ -4,13 +4,13 @@ import { ReactComponent as Heart } from "../assets/heart.svg";
 import { constants } from "../constants";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   return (
     <div className="Footer">
-      <code className="copyright-text">
+      {/* <code className="copyright-text">
         © {constants.name.firstName} {constants.name.lastName}, {currentYear}
-      </code>
+      </code> */}
       <p><a href={constants.my_link}>
         Made with{" "}
         <span>
