@@ -59,7 +59,7 @@ export const constants = {
         "Web Development - React, Angular, Node.js, AWS Lambda, Google Analytics",
       icon: <FaBriefcase />,
       evidence: [],
-      location: "Bengaluru, India",
+      location: "Bengaluru India",
     },
     {
       index: 2,
