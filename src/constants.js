@@ -40,7 +40,7 @@ export const constants = {
       key: "Resume",
       imgPath: Resume,
       imgAlt: "resume-icon",
-      href: "https://drive.google.com/file/d/1PoajmpvwyD_gRFM5jAw3bdYQpcoNAdv8/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1eQuFo8T6irSKoSL1IF4kE08Gb99loLDO/view?usp=sharing",
     },
   ],
 
