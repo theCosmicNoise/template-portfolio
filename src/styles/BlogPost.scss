@@ -86,13 +86,13 @@
       width: 100%;
     }
     p {
-      display: flex;
+      display: inline;
       justify-content: center;
       align-items: center;
-      text-align: justify;
+      // text-align: justify;
     }
     img {
-      width: 75%;
+      width: 100%;
     }
     blockquote {
       background-color: $boxShadow;
@@ -197,7 +197,7 @@
     .main-post {
       text-align: left;
       img {
-        width: 80%;
+        width: 100%;
         align-items: center;
       }
       pre {
