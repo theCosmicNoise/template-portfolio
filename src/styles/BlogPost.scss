@@ -9,10 +9,14 @@
   margin: 5rem 0 2rem;
   text-align: justify;
   font-family: "Montserrat";
+  * {
+    margin: 0.5rem 0;
+  }
   img {
     width: 80%;
     max-width: 100%;
     height: auto;
+    margin: 1rem 0;
   }
   .title {
     font-family: "GrandSlang-Roman";
@@ -24,9 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  * {
-    margin: 0.5rem 0;
   }
   .date {
     justify-content: flex-end;
