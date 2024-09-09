@@ -1,6 +1,6 @@
 @import "../ColorScheme.scss";
 .Blog-Post {
-  width: 80%;
+  width: 65%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -68,7 +68,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: justify;
+    text-align: left;
     a {
       color: $red;
       text-decoration: none;
