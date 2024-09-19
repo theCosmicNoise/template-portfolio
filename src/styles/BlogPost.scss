@@ -70,6 +70,7 @@
     align-items: center;
     flex-direction: column;
     text-align: left;
+    line-height: 2rem;
     a {
       color: $red;
       text-decoration: none;
@@ -142,6 +143,7 @@
 
 @media (min-width: 768px) and (max-width: 1025px) {
   .Blog-Post {
+    width: 85%;
     .title {
       font-size: 2rem;
     }
@@ -166,9 +168,9 @@
 @media (max-width: 767px) {
   .Blog-Post {
     margin: 3rem 0 2rem;
+    width: 85%;
     .title {
       font-size: 2rem;
-      text-align: right;
     }
     .date {
       width: 100%;
