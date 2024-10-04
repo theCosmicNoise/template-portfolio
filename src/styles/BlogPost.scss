@@ -87,6 +87,9 @@
     * {
       width: 100%;
     }
+    hr {
+      border-color: $hrBlogPost;
+    }
     p {
       display: inline;
       justify-content: center;
